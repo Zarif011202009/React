@@ -6,55 +6,17 @@ import { TextInput } from "react-native-gesture-handler";
 
 
 
-const LoginScreen = (props) => {
+const Camera = (props) => {
   return (
     <SafeAreaView>
-     <View style={styles.title}>
-      <Text style={styles.titleText}>Log In</Text>
-     </View>
+     <Text>Camera</Text>
 
-     <View styles={styles.inputs}>
-     <TextInput style = {styles.inputStyle} placeholder="Email"></TextInput>
-     <TextInput style = {styles.inputStyle} placeholder="Password"></TextInput>
-     
-     
-     <TouchableOpacity onPress={() => {
-            props.navigation.navigate("Forgot");
-          }}>
-       
-            <View style={styles.buttonForgot}>
-                <Text style={styles.buttonTextForgot}>Forgot Password</Text>
-               
-            </View>
 
-        
-           
-            
-
-        </TouchableOpacity>
-     </View>
-
-     <View>
-     <TouchableOpacity onPress={() => {
-            props.navigation.navigate("Crime");
-          }}>
-       
-            <View style={styles.button2}>
-                <Text style={styles.buttonText}>Log In</Text>
-               
-            </View>
-
-        
-           
-            
-
-        </TouchableOpacity>
-     </View>
     </SafeAreaView>
   );
 };
 
-export default LoginScreen;
+export default Camera;
 
 const styles = StyleSheet.create({
 
@@ -72,17 +34,18 @@ const styles = StyleSheet.create({
       
     },
 
-    buttonForgot:{
-        alignSelf: "center"
-    },
-
-    forgotPass:{
-        alignSelf: "center"
-    },
+    bg:{
+        borderColor: "black",
+        
+        padding:10,
+        borderWidth: 1,
+        marginBottom: 10
+        
+      },
     button2:{
         borderRadius: 50,
         padding: 5,
-        backgroundColor: "#3498DB",
+        backgroundColor: "#0099ff",
         width: 100,
         height: 35,
         paddingTop: 8,

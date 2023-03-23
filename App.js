@@ -8,6 +8,8 @@ import ProfileScreen from "./src/Screens/ProfileScreen";
 import LoginScreen from "./src/Screens/LoginScreen";
 import ForgotPasswordScreen from "./src/Screens/ForgotPasswordScreen";
 import AboutUsScreen from "./src/Screens/AboutUsScreen";
+import CrimeReportScreen from "./src/Screens/CrimeReportScreen";
+import Camera from "./src/Screens/Camera";
 
 const stack = createStackNavigator();
 
@@ -22,6 +24,8 @@ function App() {
         <stack.Screen name="Login" component={LoginScreen} />
         <stack.Screen name="Forgot" component={ForgotPasswordScreen} />
         <stack.Screen name="About" component={AboutUsScreen} />
+        <stack.Screen name="Crime" component={CrimeReportScreen} />
+        <stack.Screen name="Camera" component={Camera} />
       </stack.Navigator>
     </NavigationContainer>
   );
