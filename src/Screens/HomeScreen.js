@@ -1,7 +1,8 @@
 import React from "react";
 import { Button, Text, View } from "react-native";
 import SafeAreaView from "react-native-safe-area-view";
-import { TouchableOpacity, StyleSheet } from "react-native";
+import { TouchableOpacity, StyleSheet, ScrollView } from "react-native";
+
 
 const HomeScreen = (props) => {
   return (
@@ -89,6 +90,9 @@ const HomeScreen = (props) => {
 
         </TouchableOpacity>
         </View>
+
+
+        
 
         
     </SafeAreaView>
