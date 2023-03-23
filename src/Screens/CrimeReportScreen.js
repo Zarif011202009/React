@@ -141,11 +141,11 @@ const CrimeReportScreen = (props) => {
            
             <SelectList 
             data={categories} setSelected={setSelected} 
-            boxStyles={{marginLeft: 10, marginRight:10}}
+            boxStyles={{marginLeft: 10, marginRight:10,  borderRadius:4}}
             placeholder="Please select your answer"
             //dropdownItemStyles={{marginHorizontal:10}}
             maxHeight={200}
-            dropdownStyles={{margin:10}}
+            dropdownStyles={{margin:10, borderRadius:4}}
            
             >
                 
@@ -165,11 +165,11 @@ const CrimeReportScreen = (props) => {
            
             <SelectList 
             data={involved} setSelected={setSelected} 
-            boxStyles={{marginLeft: 10, marginRight:10}}
+            boxStyles={{marginLeft: 10, marginRight:10,  borderRadius:4}}
             placeholder="Please select your answer"
             //dropdownItemStyles={{borderColor:"black", borderWidth: 0.5, borderRadius: 10, marginBottom: 2}}
             maxHeight={200}
-            dropdownStyles={{margin:10}}
+            dropdownStyles={{margin:10,  borderRadius:4}}
            
             >
                 
@@ -188,11 +188,11 @@ const CrimeReportScreen = (props) => {
            
             <SelectList 
             data={injured} setSelected={setSelected} 
-            boxStyles={{marginLeft: 10, marginRight:10}}
+            boxStyles={{marginLeft: 10, marginRight:10, borderRadius:4}}
             placeholder="Please select your answer"
             //dropdownItemStyles={{borderColor:"black", borderWidth: 0.5, borderRadius: 10, marginBottom: 2}}
             maxHeight={200}
-            dropdownStyles={{margin:10}}
+            dropdownStyles={{margin:10,  borderRadius:4}}
            
             >
                 
@@ -212,11 +212,11 @@ const CrimeReportScreen = (props) => {
            
             <SelectList 
             data={perpetrator} setSelected={setSelected} 
-            boxStyles={{marginLeft: 10, marginRight:10}}
+            boxStyles={{marginLeft: 10, marginRight:10,  borderRadius:4}}
             placeholder="Please select your answer"
             //dropdownItemStyles={{borderColor:"black", borderWidth: 0.5, borderRadius: 10, marginBottom: 2}}
             maxHeight={200}
-            dropdownStyles={{margin:10}}
+            dropdownStyles={{margin:10,  borderRadius:4}}
            
             >
                 
@@ -235,11 +235,11 @@ const CrimeReportScreen = (props) => {
            
             <SelectList 
             data={assistance} setSelected={setSelected} 
-            boxStyles={{marginLeft: 10, marginRight:10}}
+            boxStyles={{marginLeft: 10, marginRight:10,  borderRadius:4}}
             placeholder="Please select your answer"
             //dropdownItemStyles={{borderColor:"black", borderWidth: 0.5, borderRadius: 10, marginBottom: 2}}
             maxHeight={200}
-            dropdownStyles={{margin:10}}
+            dropdownStyles={{margin:10,  borderRadius:4}}
            
             >
                 
@@ -259,11 +259,11 @@ const CrimeReportScreen = (props) => {
            
             <SelectList 
             data={location} setSelected={setSelected} 
-            boxStyles={{marginLeft: 10, marginRight:10}}
+            boxStyles={{marginLeft: 10, marginRight:10,  borderRadius:4}}
             placeholder="Please select your answer"
             //dropdownItemStyles={{borderColor:"black", borderWidth: 0.5, borderRadius: 10, marginBottom: 2}}
             maxHeight={200}
-            dropdownStyles={{margin:10}}
+            dropdownStyles={{margin:10,  borderRadius:4}}
            
             >
                 
@@ -286,11 +286,11 @@ const CrimeReportScreen = (props) => {
            
             <SelectList 
             data={priority} setSelected={setSelected} 
-            boxStyles={{marginLeft: 10, marginRight:10}}
+            boxStyles={{marginLeft: 10, marginRight:10, borderRadius:4}}
             placeholder="Please select your answer"
-            //dropdownItemStyles={{borderColor:"black", borderWidth: 0.5, borderRadius: 10, marginBottom: 2}}
+            //dropdownItemStyles={{borderColor:"black", borderWidth: 0.5}}
             maxHeight={200}
-            dropdownStyles={{margin:10}}
+            dropdownStyles={{margin:10, borderRadius:4}}
            
             >
                 
@@ -326,6 +326,27 @@ const CrimeReportScreen = (props) => {
         </TouchableOpacity>
             
         </View>
+
+
+
+
+
+        <View>
+            <TouchableOpacity onPress={() => {
+                props.navigation.navigate("Profile");
+             }}>
+       
+            <View style={styles.button2}>
+                <Text style={styles.buttonText}>Report</Text>
+               
+        </View>
+
+        
+           
+            
+
+        </TouchableOpacity>
+     </View>
           
 
 
@@ -405,18 +426,19 @@ const styles = StyleSheet.create({
        // marginBottom: 10
         
       },
-    button2:{
-        borderRadius: 50,
-        padding: 5,
-        backgroundColor: "#0099ff",
+      button2:{
+        borderRadius: 4,
+        margin: 10,
+        padding: 12,
+        backgroundColor: "#3498DB",
         width: 100,
-        height: 35,
-        paddingTop: 8,
+        height: 45,
+        marginLeft: 295,
+        marginBottom:15
+      
         
-        marginTop: 16,
+       
         
-        marginBottom: 10,
-        alignSelf: "center"
         
         
       },
