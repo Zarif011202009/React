@@ -8,6 +8,8 @@ import ProfileScreen from "./src/Screens/ProfileScreen";
 import LoginScreen from "./src/Screens/LoginScreen";
 import ForgotPasswordScreen from "./src/Screens/ForgotPasswordScreen";
 import AboutUsScreen from "./src/Screens/AboutUsScreen";
+import { ImageBackground } from "react-native";
+
 
 const stack = createStackNavigator();
 

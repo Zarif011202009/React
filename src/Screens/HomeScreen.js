@@ -1,9 +1,12 @@
 import React from "react";
 import { Button, Text, View } from "react-native";
 import SafeAreaView from "react-native-safe-area-view";
-import { TouchableOpacity, StyleSheet } from "react-native";
+import { TouchableOpacity, StyleSheet, ImageBackground } from "react-native";
+
 
 const HomeScreen = (props) => {
+  const image = {uri: "https://rahmansc.com/wp-content/uploads/2017/03/White-collar-crime-on-the-rise-in-SA.jpg"}
+  
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#f2f2f2" }}>
       <View style={styles.sideways}>
@@ -73,6 +76,13 @@ const HomeScreen = (props) => {
         <View style={styles.bg}>
             <Text>Don't have an account yet? </Text>
             <Text>Hushiar is free to use! Sign up today!</Text>
+            
+            <ImageBackground source={image}>
+
+            </ImageBackground>
+
+
+
             <TouchableOpacity onPress={() => {
             props.navigation.navigate("Sign");
           }}>
@@ -89,6 +99,8 @@ const HomeScreen = (props) => {
 
         </TouchableOpacity>
         </View>
+
+        
 
         
     </SafeAreaView>
@@ -127,17 +139,15 @@ buttonSign:{
   
 },
 button2:{
-  borderRadius: 50,
-  padding: 5,
+  borderRadius: 4,
+  margin: 10,
+  padding: 12,
   backgroundColor: "#3498DB",
   width: 100,
-  height: 35,
-  paddingTop: 8,
-  
-  marginTop: 16,
-  
-  marginBottom: 10,
-  alignSelf: "center"
+  height: 45,
+  alignSelf:"center"
+
+
   
   
 },
