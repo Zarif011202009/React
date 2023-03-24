@@ -45,17 +45,34 @@ export default ForgotPasswordScreen;
 
 const styles = StyleSheet.create({
 
-    inputStyle: {
-      borderWidth:1 ,
-      borderColor: "rgba(0,0,0,0.3)", 
-      fontSize:14,
-      borderRadius: 125,
-      marginTop: 25,
-      padding: 10,
-      paddingLeft:10,
-      margin: 20,
-      
+  inputStyle: {
+    borderWidth:1 ,
+    borderColor: "rgba(0,0,0,0.3)", 
+    fontSize:14,
+    borderRadius: 4,
     
+    padding: 10,
+    
+    margin:10,
+    marginTop:20,
+    marginLeft:20,
+    marginRight:20
+    
+    
+  
+    
+  },
+  button2:{
+    borderRadius: 4,
+    margin: 10,
+    padding: 12,
+    backgroundColor: "#3498DB",
+    width: 100,
+    height: 45,
+    marginLeft:290,
+    marginTop:20
+  
+      
       
     },
 
@@ -66,21 +83,7 @@ const styles = StyleSheet.create({
     forgotPass:{
         alignSelf: "center"
     },
-    button2:{
-        borderRadius: 50,
-        padding: 5,
-        backgroundColor: "#0099ff",
-        width: 100,
-        height: 35,
-        paddingTop: 8,
-        
-        marginTop: 16,
-        
-        marginBottom: 10,
-        alignSelf: "center"
-        
-        
-      },
+   
       
       buttonText:{
       
@@ -92,7 +95,7 @@ const styles = StyleSheet.create({
     title:{
         
         flexDirection:"row",
-        backgroundColor: "#80ccff",
+        backgroundColor: "#3498DB",
     },
 
     titleText:{

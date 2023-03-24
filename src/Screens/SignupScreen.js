@@ -49,27 +49,29 @@ const styles = StyleSheet.create({
       borderWidth:1 ,
       borderColor: "rgba(0,0,0,0.3)", 
       fontSize:14,
-      borderRadius: 125,
-      marginTop: 25,
+      borderRadius: 4,
+      
       padding: 10,
-      paddingLeft:10,
-      margin: 20,
+      
+      margin:10,
+      marginTop:20,
+      marginLeft:20,
+      marginRight:20
+      
       
     
       
     },
     button2:{
-        borderRadius: 50,
-        padding: 5,
-        backgroundColor: "#3498DB",
-        width: 100,
-        height: 35,
-        paddingTop: 8,
-        
-        marginTop: 16,
-        
-        marginBottom: 10,
-        alignSelf: "center"
+      borderRadius: 4,
+      margin: 10,
+      padding: 12,
+      backgroundColor: "#3498DB",
+      width: 100,
+      height: 45,
+      marginLeft:290,
+      marginTop:20
+    
         
         
       },
@@ -93,7 +95,8 @@ const styles = StyleSheet.create({
         padding: 10
     },
 
-    input:{
+    inputs:{
+     
 
     }
     

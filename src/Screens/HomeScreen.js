@@ -4,7 +4,7 @@ import SafeAreaView from "react-native-safe-area-view";
 
 import { TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 
-import { TouchableOpacity, StyleSheet, ImageBackground, Image } from "react-native";
+import { ImageBackground, Image } from "react-native";
 
 
 
@@ -177,7 +177,7 @@ bgText:{
 },
 
 bgImg:{
-  opacity:1
+  opacity:0.9
     
 },
 bgContent:{
