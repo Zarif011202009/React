@@ -298,7 +298,7 @@ const CrimeReportScreen = (props) => {
 
 
         <View style={styles.bg}>
-        <Text style={styles.questions}>8. What would you rate the priority of the situation? (1 being the lowest priority and 5 being the highest priority)</Text>
+        <Text style={styles.questions}>7. What would you rate the priority of the situation? (1 being the lowest priority and 5 being the highest priority)</Text>
           
            
             <SelectList 
@@ -325,7 +325,7 @@ const CrimeReportScreen = (props) => {
              
               
         <View style={styles.bg}>
-        <Text style={styles.questions}>7. Add a photo of the perpetrator/scene</Text>
+        <Text style={styles.questions}>8. Add a photo of the perpetrator/scene</Text>
           
         <TouchableOpacity onPress={() => {
             props.navigation.navigate("Camera");
