@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Text, View } from "react-native";
 import SafeAreaView from "react-native-safe-area-view";
-import { TouchableOpacity, StyleSheet, ImageBackground } from "react-native";
+import { TouchableOpacity, StyleSheet, ImageBackground, Image } from "react-native";
 
 
 const HomeScreen = (props) => {
-  const image = {uri: "https://rahmansc.com/wp-content/uploads/2017/03/White-collar-crime-on-the-rise-in-SA.jpg"}
+  
   
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#f2f2f2" }}>
@@ -52,34 +52,23 @@ const HomeScreen = (props) => {
 
         </View>
 
-        <View style={styles.bg}>
-            <Text>Welcome to Hushiar!</Text>
-            <Text>The first Bangladeshi real-time crime reporting app.</Text>
-            <TouchableOpacity onPress={() => {
-            props.navigation.navigate("About");
-          }}>
-       
-            <View style={styles.button2}>
-                <Text style={styles.buttonText}>About Us</Text>
-               
-            </View>
-            
+      
 
         
-           
+
+
+
+
+
+
+
+
+        <ImageBackground source={require('../Components/imagesFile/img_home_bg.jpg')} style={styles.bgContent} imageStyle={styles.bgImg}>
+          <View style={styles.bg}>
+
             
-
-        </TouchableOpacity>
-        </View>
-
-
-        <View style={styles.bg}>
-            <Text>Don't have an account yet? </Text>
-            <Text>Hushiar is free to use! Sign up today!</Text>
             
-            <ImageBackground source={image}>
-
-            </ImageBackground>
+          
 
 
 
@@ -98,7 +87,37 @@ const HomeScreen = (props) => {
             
 
         </TouchableOpacity>
+
+
+
+
+
+
+
+        
+            
+          
+
+
+
+            <TouchableOpacity onPress={() => {
+            props.navigation.navigate("About");
+          }}>
+       
+            <View style={styles.button2}>
+                <Text style={styles.buttonText}>About Us</Text>
+               
+            </View>
+            
+
+        
+           
+            
+
+        </TouchableOpacity>
+
         </View>
+        </ImageBackground>
 
         
 
@@ -124,6 +143,46 @@ buttonLog:{
 
 
   
+},
+
+bg:{
+  
+  
+padding:100,
+paddingTop:200,
+
+alignContent:"center"
+
+  
+  
+
+  
+},
+
+bgText:{
+  fontWeight: "bold",
+  fontSize: 14,
+  textShadowColor: "black",
+  color: "white",
+  marginLeft:30
+
+
+},
+
+bgImg:{
+  opacity:1
+    
+},
+bgContent:{
+  textShadowColor:"black",
+  flex:1
+},
+
+imageStyle:{
+
+  width: 100,
+  height:100
+
 },
 
 buttonSign:{
@@ -176,13 +235,6 @@ homeText:{
   
   
 }, 
-bg:{
-  borderColor: "black",
-  
-  padding:10,
-  borderWidth: 1,
-  marginBottom: 10
-  
-}
+
 
 })
