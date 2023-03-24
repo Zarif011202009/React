@@ -11,6 +11,10 @@ import AboutUsScreen from "./src/Screens/AboutUsScreen";
 
 import CrimeReportScreen from "./src/Screens/CrimeReportScreen";
 import Camera from "./src/Screens/Camera";
+import FeedScreen from "./src/Screens/FeedScreen";
+import ViewDetailsScreen from "./src/Screens/ViewDetailsScreen";
+import UpdateProfileScreen from "./src/Screens/UpdateProfileScreen";
+import UpdateComplaintScreen from "./src/Screens/UpdateComplaintScreen";
 
 import { ImageBackground } from "react-native";
 
@@ -31,6 +35,10 @@ function App() {
         <stack.Screen name="About" component={AboutUsScreen} />
         <stack.Screen name="Crime" component={CrimeReportScreen} />
         <stack.Screen name="Camera" component={Camera} />
+        <stack.Screen name="Feed" component={FeedScreen} />
+        <stack.Screen name="View" component={ViewDetailsScreen} />
+        <stack.Screen name="UpdateProfile" component={UpdateProfileScreen} />
+        <stack.Screen name="UpdateComplaint" component={UpdateComplaintScreen} />
       </stack.Navigator>
     </NavigationContainer>
   );

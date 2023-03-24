@@ -8,7 +8,7 @@ import { SelectList } from "react-native-dropdown-select-list";
 
 
 
-const CrimeReportScreen = (props) => {
+const UpdateComplaintScreen = (props) => {
     const [selected, setSelected] = React.useState("");
 
     const categories = [
@@ -84,7 +84,7 @@ const CrimeReportScreen = (props) => {
     <ScrollView>
     <SafeAreaView>
      <View style={styles.title}>
-      <Text style={styles.titleText}>Complaint</Text>
+      <Text style={styles.titleText}>Update</Text>
 
 
 
@@ -354,7 +354,7 @@ const CrimeReportScreen = (props) => {
              }}>
        
             <View style={styles.button2}>
-                <Text style={styles.buttonText}>Report</Text>
+                <Text style={styles.buttonText}>Update</Text>
                
         </View>
 
@@ -377,7 +377,7 @@ const CrimeReportScreen = (props) => {
   );
 };
 
-export default CrimeReportScreen;
+export default UpdateComplaintScreen;
 
 const styles = StyleSheet.create({
 
@@ -416,7 +416,7 @@ const styles = StyleSheet.create({
         width: 40,
         height: 35,
         paddingTop: 8,
-        marginLeft: 50,
+        marginLeft: 100,
         marginTop: 16,
     
         },
