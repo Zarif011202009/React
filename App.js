@@ -15,6 +15,8 @@ import FeedScreen from "./src/Screens/FeedScreen";
 import ViewDetailsScreen from "./src/Screens/ViewDetailsScreen";
 import UpdateProfileScreen from "./src/Screens/UpdateProfileScreen";
 import UpdateComplaintScreen from "./src/Screens/UpdateComplaintScreen";
+import AdminProfileScreen from "./src/Screens/AdminProfileScreen";
+import AdminComplaintsScreen from "./src/Screens/AdminComplaintsScreen";
 
 import { ImageBackground } from "react-native";
 
@@ -39,6 +41,9 @@ function App() {
         <stack.Screen name="View" component={ViewDetailsScreen} />
         <stack.Screen name="UpdateProfile" component={UpdateProfileScreen} />
         <stack.Screen name="UpdateComplaint" component={UpdateComplaintScreen} />
+
+        <stack.Screen name="AdminProfile" component={AdminProfileScreen} />
+        <stack.Screen name="AdminComplaints" component={AdminComplaintsScreen} />
       </stack.Navigator>
     </NavigationContainer>
   );

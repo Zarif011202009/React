@@ -348,7 +348,7 @@ const styles = StyleSheet.create({
   complaints:{
       margin:10,
       padding:10,
-      borderWidth:1,
+      borderWidth:0.5,
 
   },
 
@@ -391,7 +391,7 @@ const styles = StyleSheet.create({
 
   imgBox:{
     margin:10,
-    borderWidth:1,
+    borderWidth:0.5,
     borderColor:"black",
     padding:10
 
