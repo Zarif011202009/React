@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Text, View } from "react-native";
 import SafeAreaView from "react-native-safe-area-view";
-<<<<<<< HEAD
+
 import { TouchableOpacity, StyleSheet, ScrollView } from "react-native";
-=======
+
 import { TouchableOpacity, StyleSheet, ImageBackground, Image } from "react-native";
->>>>>>> feature/saamz/homepage_screen
+
 
 
 const HomeScreen = (props) => {

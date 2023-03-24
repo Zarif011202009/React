@@ -8,13 +8,13 @@ import ProfileScreen from "./src/Screens/ProfileScreen";
 import LoginScreen from "./src/Screens/LoginScreen";
 import ForgotPasswordScreen from "./src/Screens/ForgotPasswordScreen";
 import AboutUsScreen from "./src/Screens/AboutUsScreen";
-<<<<<<< HEAD
+
 import CrimeReportScreen from "./src/Screens/CrimeReportScreen";
 import Camera from "./src/Screens/Camera";
-=======
+
 import { ImageBackground } from "react-native";
 
->>>>>>> feature/saamz/homepage_screen
+
 
 const stack = createStackNavigator();
 
