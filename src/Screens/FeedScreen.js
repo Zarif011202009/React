@@ -517,9 +517,10 @@ const styles = StyleSheet.create({
   },
 
   complaints:{
-      margin:10,
+      marginLeft:10,
+      marginRight:10,
       padding:10,
-      borderWidth:1,
+      borderWidth:0,
 
   },
 

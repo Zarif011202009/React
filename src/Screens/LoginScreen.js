@@ -50,6 +50,26 @@ const LoginScreen = (props) => {
 
         </TouchableOpacity>
      </View>
+
+
+
+
+     <View>
+     <TouchableOpacity onPress={() => {
+            props.navigation.navigate("AdminProfile");
+          }}>
+       
+            <View style={styles.button4}>
+                <Text style={styles.buttonText2}>Admin Log In</Text>
+               
+            </View>
+
+        
+           
+            
+
+        </TouchableOpacity>
+     </View>
     </SafeAreaView>
   );
 };
@@ -103,6 +123,14 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         textAlign: 'center'
+      },
+
+      buttonText2:{
+      
+        color: 'black',
+        fontWeight: 'bold',
+        marginLeft:295,
+        marginTop:20,
       },
 
     title:{

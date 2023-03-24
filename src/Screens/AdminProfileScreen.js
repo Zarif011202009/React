@@ -4,37 +4,22 @@ import SafeAreaView from "react-native-safe-area-view";
 import ProductCard from "../Components/ProductCard";
 
 
-const ViewDetailsScreen = (props) => {
+const AdminProfileScreen = (props) => {
   return (
 
        <SafeAreaView style={{ flex: 1, backgroundColor: "#f2f2f2" }}>
       <View style={styles.sideways}>
-        <Text style={styles.homeText}>Details</Text>
+        <Text style={styles.homeText}>Profile</Text>
 
 
-   
-       
+        
 
         <TouchableOpacity onPress={() => {
-            props.navigation.navigate("Crime");
+            props.navigation.navigate("AdminComplaints");
           }}>
        
             <View style={styles.buttonComplaints}>
-                <Text style={styles.buttonText}>Complaint</Text>
-               
-            </View>
-
-         
-            
-
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => {
-            props.navigation.navigate("Profile");
-          }}>
-       
-            <View style={styles.buttonProfile}>
-                <Text style={styles.buttonText}>Profile</Text>
+                <Text style={styles.buttonText}>Complaints</Text>
                
             </View>
 
@@ -70,9 +55,27 @@ const ViewDetailsScreen = (props) => {
 
 
 
+        <View style={styles.imgBox}>
+
+
+           <View style={styles.imgSideways}>
+
+            <Image source={require('../Components/imagesFile/img_avatar.png')} style={styles.imgStyle}></Image>
+
+            <View style={styles.textProfile}>
+
+            <Text style={styles.nameText}>Syed Zarif</Text>
+            <Text>23/A, East Rampura, Dhaka</Text>
+            <Text>syedzarif@gmail.com</Text>
+
+
+
+
         
 
-         
+
+
+            </View>
 
 
 
@@ -83,66 +86,23 @@ const ViewDetailsScreen = (props) => {
 
 
 
-           
-
-
-        <ScrollView>
-
-        <View style={styles.complaints}>
-                  
-
-         
-
-                  <View style={styles.history}>
-                 
-                      <Text>Complaint ID: #23</Text>
-                      <Text>Date: 29/05/22 04:23 PM</Text>
-                      <Text>Category: Harassment</Text>
-                      <Text>Condition: Minor Injuries</Text>
-                      
-                      <Text>Perpetrator(s) still on scene</Text>
-                      <Text>Location: East Rampura</Text>
-                      <Text>Priority: 4</Text>
-                     
-
-
-                  </View>
-
-
-                  
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </View>
 
 
             
 
-                  
 
-           
-                  
 
-        </View>
+</View>
+            
 
-        </ScrollView>
 
+      
     </SafeAreaView>
   );
 };
 
-export default ViewDetailsScreen;
+export default AdminProfileScreen;
 
 
 const styles = StyleSheet.create({
@@ -165,7 +125,7 @@ const styles = StyleSheet.create({
   complaints:{
       margin:10,
       padding:10,
-      borderWidth:0.5,
+      borderWidth:1,
 
   },
 
@@ -188,6 +148,8 @@ const styles = StyleSheet.create({
       
     },
 
+  
+
     button3:{
       borderRadius: 4,
       
@@ -206,7 +168,7 @@ const styles = StyleSheet.create({
 
   imgBox:{
     margin:10,
-    borderWidth:1,
+    borderWidth:0.5,
     borderColor:"black",
     padding:10
 
@@ -259,6 +221,20 @@ homeText:{
       width:20
   },
 
+
+  buttonFeed:{
+
+     
+
+   
+    width: 40,
+    height: 35,
+    paddingTop: 8,
+    marginLeft: 80,
+    marginTop: 16,
+
+    },
+
   buttonUpdate:{
     borderRadius: 50,
     
@@ -279,7 +255,7 @@ homeText:{
     width: 80,
     height: 35,
     paddingTop: 8,
-    marginLeft: 70,
+    marginLeft: 130,
     marginTop: 16,
   
     
@@ -298,20 +274,6 @@ homeText:{
   
   
     
-  },
-
-  
-  buttonProfile:{
-    borderRadius: 50,
-
-
-    width: 50,
-    height: 35,
-    paddingTop: 8,
-    
-    marginTop: 16,
-    marginLeft:5
-
   },
 })
   
