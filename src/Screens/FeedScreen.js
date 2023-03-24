@@ -4,27 +4,15 @@ import SafeAreaView from "react-native-safe-area-view";
 import ProductCard from "../Components/ProductCard";
 
 
-const ProfileScreen = (props) => {
+const FeedScreen = (props) => {
   return (
 
        <SafeAreaView style={{ flex: 1, backgroundColor: "#f2f2f2" }}>
       <View style={styles.sideways}>
-        <Text style={styles.homeText}>Profile</Text>
+        <Text style={styles.homeText}>Feed</Text>
 
 
-        <TouchableOpacity onPress={() => {
-            props.navigation.navigate("Feed");
-          }}>
-       
-            <View style={styles.buttonFeed}>
-                <Text style={styles.buttonText}>Feed</Text>
-               
-            </View>
-
-         
-            
-
-        </TouchableOpacity>
+   
        
 
         <TouchableOpacity onPress={() => {
@@ -33,6 +21,20 @@ const ProfileScreen = (props) => {
        
             <View style={styles.buttonComplaints}>
                 <Text style={styles.buttonText}>Complaint</Text>
+               
+            </View>
+
+         
+            
+
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => {
+            props.navigation.navigate("Profile");
+          }}>
+       
+            <View style={styles.buttonProfile}>
+                <Text style={styles.buttonText}>Profile</Text>
                
             </View>
 
@@ -68,38 +70,9 @@ const ProfileScreen = (props) => {
 
 
 
-        <View style={styles.imgBox}>
+        
 
-
-           <View style={styles.imgSideways}>
-
-            <Image source={require('../Components/imagesFile/img_avatar.png')} style={styles.imgStyle}></Image>
-
-            <View style={styles.textProfile}>
-
-            <Text style={styles.nameText}>Syed Muhammad Zarif</Text>
-            <Text>23/A, East Rampura, Dhaka</Text>
-            <Text>syedzarif@gmail.com</Text>
-
-
-
-
-            <View>
-                <TouchableOpacity onPress={() => {
-                  props.navigation.navigate("UpdateProfile");
-                 }}>
-       
-            <View style={styles.button2}>
-                <Text style={styles.buttonText}>Update</Text>
-               
-            </View>
-
-
-        </TouchableOpacity>
-     </View>
-
-
-            </View>
+         
 
 
 
@@ -110,24 +83,13 @@ const ProfileScreen = (props) => {
 
 
 
-            </View>
-
-
-            
-
-
-
-
-            
-
-
-        </View>
+           
 
 
         <ScrollView>
 
         <View style={styles.complaints}>
-                  <Text style={styles.nameText}>Complaint History</Text>
+                  
 
             <View style={styles.historyButton}>
 
@@ -144,11 +106,11 @@ const ProfileScreen = (props) => {
 
 
                   <TouchableOpacity onPress={() => {
-                  props.navigation.navigate("UpdateComplaint");
+                  props.navigation.navigate("View");
                  }}>
        
             <View style={styles.button3}>
-                <Text style={styles.buttonText}>Update Info</Text>
+                <Text style={styles.buttonText}>View Details</Text>
                
             </View>
 
@@ -159,7 +121,60 @@ const ProfileScreen = (props) => {
 
 
 
-                  
+
+
+
+
+
+
+
+
+
+
+
+
+            <View style={styles.historyButton}>
+
+                  <View style={styles.history}>
+                 
+                      <Text>Complaint ID: #23</Text>
+                      <Text>Date: 29/05/22 04:23 PM</Text>
+                      <Text>Category: Harassment</Text>
+                      <Text>Location: East Motijheel</Text>
+                     
+
+
+                  </View>
+
+
+                  <TouchableOpacity onPress={() => {
+                  props.navigation.navigate("View");
+                 }}>
+       
+            <View style={styles.button3}>
+                <Text style={styles.buttonText}>View Details</Text>
+               
+            </View>
+
+
+        </TouchableOpacity>
+
+            </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <View style={styles.historyButton}>
 
@@ -176,11 +191,11 @@ const ProfileScreen = (props) => {
 
 
 <TouchableOpacity onPress={() => {
-props.navigation.navigate("UpdateComplaint");
+props.navigation.navigate("View");
 }}>
 
 <View style={styles.button3}>
-<Text style={styles.buttonText}>Update Info</Text>
+<Text style={styles.buttonText}>View Details</Text>
 
 </View>
 
@@ -204,6 +219,44 @@ props.navigation.navigate("UpdateComplaint");
 
 <View style={styles.historyButton}>
 
+                  <View style={styles.history}>
+                 
+                      <Text>Complaint ID: #23</Text>
+                      <Text>Date: 29/05/22 04:23 PM</Text>
+                      <Text>Category: Harassment</Text>
+                      <Text>Location: East Motijheel</Text>
+                     
+
+
+                  </View>
+
+
+                  <TouchableOpacity onPress={() => {
+                  props.navigation.navigate("View");
+                 }}>
+       
+            <View style={styles.button3}>
+                <Text style={styles.buttonText}>View Details</Text>
+               
+            </View>
+
+
+        </TouchableOpacity>
+
+            </View>
+
+
+
+
+
+
+
+
+
+
+
+            <View style={styles.historyButton}>
+
 <View style={styles.history}>
 
     <Text>Complaint ID: #23</Text>
@@ -217,11 +270,11 @@ props.navigation.navigate("UpdateComplaint");
 
 
 <TouchableOpacity onPress={() => {
-props.navigation.navigate("UpdateComplaint");
+props.navigation.navigate("View");
 }}>
 
 <View style={styles.button3}>
-<Text style={styles.buttonText}>Update Info</Text>
+<Text style={styles.buttonText}>View Details</Text>
 
 </View>
 
@@ -229,6 +282,85 @@ props.navigation.navigate("UpdateComplaint");
 </TouchableOpacity>
 
 </View>
+
+
+
+
+
+
+
+
+
+
+
+<View style={styles.historyButton}>
+
+                  <View style={styles.history}>
+                 
+                      <Text>Complaint ID: #23</Text>
+                      <Text>Date: 29/05/22 04:23 PM</Text>
+                      <Text>Category: Harassment</Text>
+                      <Text>Location: East Motijheel</Text>
+                     
+
+
+                  </View>
+
+
+                  <TouchableOpacity onPress={() => {
+                  props.navigation.navigate("View");
+                 }}>
+       
+            <View style={styles.button3}>
+                <Text style={styles.buttonText}>View Details</Text>
+               
+            </View>
+
+
+        </TouchableOpacity>
+
+            </View>
+
+
+
+
+
+
+
+
+
+
+
+
+            <View style={styles.historyButton}>
+
+<View style={styles.history}>
+
+    <Text>Complaint ID: #23</Text>
+    <Text>Date: 29/05/22 04:23 PM</Text>
+    <Text>Category: Harassment</Text>
+    <Text>Location: East Motijheel</Text>
+   
+
+
+</View>
+
+
+<TouchableOpacity onPress={() => {
+props.navigation.navigate("View");
+}}>
+
+<View style={styles.button3}>
+<Text style={styles.buttonText}>View Details</Text>
+
+</View>
+
+
+</TouchableOpacity>
+
+</View>
+
+
 
 
 
@@ -243,6 +375,45 @@ props.navigation.navigate("UpdateComplaint");
 
 <View style={styles.historyButton}>
 
+                  <View style={styles.history}>
+                 
+                      <Text>Complaint ID: #23</Text>
+                      <Text>Date: 29/05/22 04:23 PM</Text>
+                      <Text>Category: Harassment</Text>
+                      <Text>Location: East Motijheel</Text>
+                     
+
+
+                  </View>
+
+
+                  <TouchableOpacity onPress={() => {
+                  props.navigation.navigate("View");
+                 }}>
+       
+            <View style={styles.button3}>
+                <Text style={styles.buttonText}>View Details</Text>
+               
+            </View>
+
+
+        </TouchableOpacity>
+
+            </View>
+
+
+
+
+
+
+
+
+
+
+
+
+            <View style={styles.historyButton}>
+
 <View style={styles.history}>
 
     <Text>Complaint ID: #23</Text>
@@ -256,11 +427,11 @@ props.navigation.navigate("UpdateComplaint");
 
 
 <TouchableOpacity onPress={() => {
-props.navigation.navigate("UpdateComplaint");
+props.navigation.navigate("View");
 }}>
 
 <View style={styles.button3}>
-<Text style={styles.buttonText}>Update Info</Text>
+<Text style={styles.buttonText}>View Details</Text>
 
 </View>
 
@@ -268,6 +439,9 @@ props.navigation.navigate("UpdateComplaint");
 </TouchableOpacity>
 
 </View>
+
+
+
 
 
 
@@ -280,41 +454,38 @@ props.navigation.navigate("UpdateComplaint");
 
 <View style={styles.historyButton}>
 
-<View style={styles.history}>
-
-    <Text>Complaint ID: #23</Text>
-    <Text>Date: 29/05/22 04:23 PM</Text>
-    <Text>Category: Harassment</Text>
-    <Text>Location: East Motijheel</Text>
-   
-
-
-</View>
+                  <View style={styles.history}>
+                 
+                      <Text>Complaint ID: #23</Text>
+                      <Text>Date: 29/05/22 04:23 PM</Text>
+                      <Text>Category: Harassment</Text>
+                      <Text>Location: East Motijheel</Text>
+                     
 
 
-<TouchableOpacity onPress={() => {
-props.navigation.navigate("UpdateComplaint");
-}}>
-
-<View style={styles.button3}>
-<Text style={styles.buttonText}>Update Info</Text>
-
-</View>
+                  </View>
 
 
-</TouchableOpacity>
+                  <TouchableOpacity onPress={() => {
+                  props.navigation.navigate("View");
+                 }}>
+       
+            <View style={styles.button3}>
+                <Text style={styles.buttonText}>View Details</Text>
+               
+            </View>
 
-</View>
+
+        </TouchableOpacity>
+
+            </View>
 
 
-            
 
 
                   
 
-
-                  
-
+           
                   
 
         </View>
@@ -325,7 +496,7 @@ props.navigation.navigate("UpdateComplaint");
   );
 };
 
-export default ProfileScreen;
+export default FeedScreen;
 
 
 const styles = StyleSheet.create({
@@ -370,8 +541,6 @@ const styles = StyleSheet.create({
       
       
     },
-
-  
 
     button3:{
       borderRadius: 4,
@@ -444,20 +613,6 @@ homeText:{
       width:20
   },
 
-
-  buttonFeed:{
-
-     
-
-   
-    width: 40,
-    height: 35,
-    paddingTop: 8,
-    marginLeft: 80,
-    marginTop: 16,
-
-    },
-
   buttonUpdate:{
     borderRadius: 50,
     
@@ -478,7 +633,7 @@ homeText:{
     width: 80,
     height: 35,
     paddingTop: 8,
-    marginLeft: 10,
+    marginLeft: 100,
     marginTop: 16,
   
     
@@ -497,6 +652,20 @@ homeText:{
   
   
     
+  },
+
+  
+  buttonProfile:{
+    borderRadius: 50,
+
+
+    width: 50,
+    height: 35,
+    paddingTop: 8,
+    
+    marginTop: 16,
+    marginLeft:5
+
   },
 })
   

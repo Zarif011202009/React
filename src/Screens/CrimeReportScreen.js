@@ -87,11 +87,28 @@ const CrimeReportScreen = (props) => {
       <Text style={styles.titleText}>Complaint</Text>
 
 
+
+      <TouchableOpacity onPress={() => {
+            props.navigation.navigate("Feed");
+          }}>
+       
+            <View style={styles.buttonFeed}>
+                <Text style={styles.buttonText}>Feed</Text>
+               
+            </View>
+
+         
+            
+
+        </TouchableOpacity>
+       
+
+
       <TouchableOpacity onPress={() => {
             props.navigation.navigate("Profile");
           }}>
        
-            <View style={styles.buttonSign}>
+            <View style={styles.buttonProfile}>
                 <Text style={styles.buttonText}>Profile</Text>
                
             </View>
@@ -390,19 +407,47 @@ const styles = StyleSheet.create({
         margin: 10
     },
 
+
+    buttonFeed:{
+
+     
+
+   
+        width: 40,
+        height: 35,
+        paddingTop: 8,
+        marginLeft: 50,
+        marginTop: 16,
+    
+        },
+
     buttonLog:{
         borderRadius: 50,
-        padding: 5,
         
-        width: 80,
+        
+        width: 60,
         height: 35,
         paddingTop: 8,
         
         marginTop: 16,
+        marginLeft:5
       
       
       
         
+      },
+
+      buttonProfile:{
+        borderRadius: 50,
+
+   
+        width: 50,
+        height: 35,
+        paddingTop: 8,
+        
+        marginTop: 16,
+        marginLeft:5
+
       },
       
     buttonSign:{
@@ -412,7 +457,7 @@ const styles = StyleSheet.create({
         width: 70,
         height: 35,
         paddingTop: 8,
-        marginLeft: 80,
+        marginLeft: 70,
         marginTop: 16,
       
         

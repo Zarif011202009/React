@@ -177,7 +177,7 @@ bgText:{
 },
 
 bgImg:{
-  opacity:0.9
+  opacity:1
     
 },
 bgContent:{
