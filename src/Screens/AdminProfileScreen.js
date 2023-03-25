@@ -12,6 +12,22 @@ const AdminProfileScreen = (props) => {
         <Text style={styles.homeText}>Profile</Text>
 
 
+
+        <TouchableOpacity onPress={() => {
+            props.navigation.navigate("AdminUsers");
+          }}>
+       
+            <View style={styles.buttonUsers}>
+                <Text style={styles.buttonText}>Users</Text>
+               
+            </View>
+
+         
+            
+
+        </TouchableOpacity>
+
+
         
 
         <TouchableOpacity onPress={() => {
@@ -29,8 +45,6 @@ const AdminProfileScreen = (props) => {
         </TouchableOpacity>
 
 
-        
-  
         <TouchableOpacity onPress={() => {
             props.navigation.navigate("Login");
           }}>
@@ -94,6 +108,60 @@ const AdminProfileScreen = (props) => {
 
 
 </View>
+
+
+<View style={styles.buttonBox1}>
+    <View style={styles.textButtonSideways}>
+        <View style={styles.column}>
+    <Text>To see the full list of registered users</Text>
+    <Text>Click here!</Text>
+    </View>
+
+
+
+    <TouchableOpacity onPress={() => {
+                  props.navigation.navigate("AdminUsers");
+                 }}>
+       
+            <View style={styles.button3}>
+                <Text style={styles.buttonText}>Users</Text>
+               
+            </View>
+
+
+        </TouchableOpacity>
+
+        </View>
+
+</View>
+
+
+
+
+<View style={styles.buttonBox1}>
+    <View style={styles.textButtonSideways}>
+        <View style={styles.column}>
+    <Text>To see the complaints from users</Text>
+    <Text>Click here!</Text>
+    </View>
+
+
+
+    <TouchableOpacity onPress={() => {
+                  props.navigation.navigate("AdminComplaints");
+                 }}>
+       
+            <View style={styles.button4}>
+                <Text style={styles.buttonText}>Complaints</Text>
+               
+            </View>
+
+
+        </TouchableOpacity>
+
+        </View>
+
+</View>
             
 
 
@@ -106,6 +174,21 @@ export default AdminProfileScreen;
 
 
 const styles = StyleSheet.create({
+
+    column:{
+            flexDirection:"column"
+    },
+
+
+    textButtonSideways:{
+        flexDirection:"row"
+    },
+
+    buttonBox1:{
+        margin:10,
+        borderWidth:0.5,
+        padding:10
+    },
 
 
   historyButton:{
@@ -151,19 +234,32 @@ const styles = StyleSheet.create({
   
 
     button3:{
-      borderRadius: 4,
+        borderRadius: 4,
+        
+        padding: 12,
+        backgroundColor: "#3498DB",
+        width: 110,
+        height: 45,
+        marginLeft:35,
       
-      padding: 12,
-      backgroundColor: "#3498DB",
-      width: 120,
-      height: 45,
-      marginLeft:60,
-      marginTop:4
     
         
         
       },
   
+      button4:{
+        borderRadius: 4,
+        
+        padding: 12,
+        backgroundColor: "#3498DB",
+        width: 110,
+        height: 45,
+        marginLeft:55,
+        
+      
+          
+          
+        },
 
 
   imgBox:{
@@ -248,14 +344,27 @@ homeText:{
     
   },
 
+  buttonUsers:{
+    borderRadius: 50,
+
+   
+    width: 60,
+    height: 35,
+    paddingTop: 8,
+    marginLeft: 75,
+    marginTop: 16,
+  
+    
+  },
+
   buttonComplaints:{
     borderRadius: 50,
 
    
-    width: 80,
+    width: 78,
     height: 35,
     paddingTop: 8,
-    marginLeft: 130,
+    
     marginTop: 16,
   
     

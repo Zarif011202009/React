@@ -12,7 +12,19 @@ const AdminComplaintsScreen = (props) => {
         <Text style={styles.homeText}>Complaints</Text>
 
 
-   
+        <TouchableOpacity onPress={() => {
+            props.navigation.navigate("AdminUsers");
+          }}>
+       
+            <View style={styles.buttonUsers}>
+                <Text style={styles.buttonText}>Users</Text>
+               
+            </View>
+
+         
+            
+
+        </TouchableOpacity>
        
 
 
@@ -509,6 +521,19 @@ homeText:{
       width:20
   },
 
+  buttonUsers:{
+    borderRadius: 50,
+
+   
+    width: 60,
+    height: 35,
+    paddingTop: 8,
+    marginLeft: 20,
+    marginTop: 16,
+  
+    
+  },
+
   buttonUpdate:{
     borderRadius: 50,
     
@@ -529,7 +554,7 @@ homeText:{
     width: 80,
     height: 35,
     paddingTop: 8,
-    marginLeft: 100,
+    
     marginTop: 16,
   
     
@@ -560,7 +585,7 @@ homeText:{
     paddingTop: 8,
     
     marginTop: 16,
-    marginLeft:80
+   
 
   },
 })
