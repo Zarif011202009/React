@@ -13,6 +13,8 @@ const LoginScreen = (props) => {
       <Text style={styles.titleText}>Log In</Text>
      </View>
 
+     
+
      <View styles={styles.inputs}>
      <TextInput style = {styles.inputStyle} placeholder="Email"></TextInput>
      <TextInput style = {styles.inputStyle} placeholder="Password"></TextInput>

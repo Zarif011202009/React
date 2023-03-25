@@ -98,7 +98,7 @@ const AdminUsersScreen = (props) => {
                       <Text style={styles.textBold}>User ID: #46</Text>
                       <Text>Name: Syed Muhammad Zarif</Text>
                       <Text>Address: 24/E, East Rampura, Dhaka</Text>
-                      <Text>Location: East Motijheel</Text>
+                    
                       <Text>Phone: 01731276523</Text>
                       <Text>Email: syedzarif@gmail.com</Text>
                       
@@ -144,7 +144,7 @@ const AdminUsersScreen = (props) => {
                       <Text style={styles.textBold}>User ID: #46</Text>
                       <Text>Name: Syed Muhammad Zarif</Text>
                       <Text>Address: 24/E, East Rampura, Dhaka</Text>
-                      <Text>Location: East Motijheel</Text>
+                    
                       <Text>Phone: 01731276523</Text>
                       <Text>Email: syedzarif@gmail.com</Text>
                       
@@ -190,7 +190,7 @@ const AdminUsersScreen = (props) => {
     <Text style={styles.textBold}>User ID: #46</Text>
     <Text>Name: Syed Muhammad Zarif</Text>
     <Text>Address: 24/E, East Rampura, Dhaka</Text>
-    <Text>Location: East Motijheel</Text>
+    
     <Text>Phone: 01731276523</Text>
     <Text>Email: syedzarif@gmail.com</Text>
     
@@ -231,7 +231,7 @@ props.navigation.navigate("View");
                       <Text style={styles.textBold}>User ID: #46</Text>
                       <Text>Name: Syed Muhammad Zarif</Text>
                       <Text>Address: 24/E, East Rampura, Dhaka</Text>
-                      <Text>Location: East Motijheel</Text>
+                    
                       <Text>Phone: 01731276523</Text>
                       <Text>Email: syedzarif@gmail.com</Text>
                       
@@ -276,7 +276,7 @@ props.navigation.navigate("View");
     <Text style={styles.textBold}>User ID: #46</Text>
     <Text>Name: Syed Muhammad Zarif</Text>
     <Text>Address: 24/E, East Rampura, Dhaka</Text>
-    <Text>Location: East Motijheel</Text>
+   
     <Text>Phone: 01731276523</Text>
     <Text>Email: syedzarif@gmail.com</Text>
     
@@ -320,7 +320,7 @@ props.navigation.navigate("View");
                       <Text style={styles.textBold}>User ID: #46</Text>
                       <Text>Name: Syed Muhammad Zarif</Text>
                       <Text>Address: 24/E, East Rampura, Dhaka</Text>
-                      <Text>Location: East Motijheel</Text>
+                     
                       <Text>Phone: 01731276523</Text>
                       <Text>Email: syedzarif@gmail.com</Text>
                       
