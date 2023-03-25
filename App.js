@@ -17,6 +17,7 @@ import UpdateProfileScreen from "./src/Screens/UpdateProfileScreen";
 import UpdateComplaintScreen from "./src/Screens/UpdateComplaintScreen";
 import AdminProfileScreen from "./src/Screens/AdminProfileScreen";
 import AdminComplaintsScreen from "./src/Screens/AdminComplaintsScreen";
+import AdminUsersScreen from "./src/Screens/AdminUsersScreen";
 
 import { ImageBackground } from "react-native";
 
@@ -44,6 +45,7 @@ function App() {
 
         <stack.Screen name="AdminProfile" component={AdminProfileScreen} />
         <stack.Screen name="AdminComplaints" component={AdminComplaintsScreen} />
+        <stack.Screen name="AdminUsers" component={AdminUsersScreen} />
       </stack.Navigator>
     </NavigationContainer>
   );
