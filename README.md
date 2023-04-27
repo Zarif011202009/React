@@ -5,3 +5,27 @@ The frontend has been designed with ReactJS.
 </p>
 Each page of the application can be found in the src/screens folder.
 The application is run via Expo, and it is functional on both Android and iOS oeprating systems. 
+
+<p>
+The commands required to start the project are as follows: npm install ; npx expo start
+</p>
+
+<p>
+
+AboutUsScreen.js is a screen showing some information about the appliaction, what kinds of services the user can expect
+
+</p>
+
+<p>
+
+AdminComplaintsScreen.js is a screen where the admins can view all the complaints that have been filed by the users. They can perform further actions via the buttons on this page.
+
+</p>
+
+<p>
+
+AdminComplaintsScreen.js is a screen where the admins can view all the complaints that have been filed by the users. They can perform further actions via the buttons on this page.
+
+</p>
+
+
