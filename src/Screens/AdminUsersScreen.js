@@ -94,7 +94,7 @@ const getList= () => {
 
 
 
-          {/* //dynamic from here
+           {/* //dynamic from here
 
 
 
@@ -118,7 +118,7 @@ const getList= () => {
 
 
 
-            //dynamic end */}
+            //dynamic end  */}
 
 
 

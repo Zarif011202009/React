@@ -5,6 +5,7 @@ import { Text, Modal, FormData, Form, TouchableOpacity, View, Input, StyleSheet,
 import { TextInput } from "react-native-gesture-handler";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { addUser } from "../Services/user.service";
 
 
 
@@ -40,14 +41,9 @@ const handelSave = () => {
           "email": email,
           "phone":phone
         }
-      axios({
-          url:"https://localhost/user/",
-          method : "POST",
-          data : data,
-          headers : {
-              "Content-Type" : "application/json"
-          }
-      }).then((res)=>{
+        console.log(data)
+        addUser(data).then((res)=>{
+        console.log(res)
         
 
           setName("")
