@@ -1,29 +1,97 @@
 import React from "react";
 import SafeAreaView from "react-native-safe-area-view";
 import ProductCard from "../Components/ProductCard";
-import { Text, Form, TouchableOpacity, View, Input, StyleSheet, Flatlist } from "react-native";
+import { Text, Modal, FormData, Form, TouchableOpacity, View, Input, StyleSheet, Flatlist } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+
 
 
 
 const SignupScreen = (props) => {
+
+  const [name,setName] = useState("");
+  const [phone,setPhone] = useState("");
+  const [email,setEmail] = useState("");
+ 
+
+  useEffect(()=>{
+    getList()
+},[])
+
+const getList= () => {
+ 
+  fetch("http://localhost:3000/user",{
+      
+      method : "GET"
+  }).then(res=>{
+      return res.json()
+  }).then(res=>{
+      alert(res.list.length)
+  })
+}
+
+const handelSave = () => {
+
+      var data = {
+          "name": name,
+          "email": email,
+          "phone":phone
+        }
+      axios({
+          url:"https://localhost/user/",
+          method : "POST",
+          data : data,
+          headers : {
+              "Content-Type" : "application/json"
+          }
+      }).then((res)=>{
+        
+
+          setName("")
+          
+          setPhone("")
+          setEmail("")
+      
+      })
+    }
+
+    const onChangeName = (value) => {
+      setName(value)
+  }
+
+  const onChangePhone = (value) => {
+    setPhone(value)
+}
+
+const onChangeEmail = (value) => {
+  setEmail(value)
+}
+  
+
+
+  
   return (
     <SafeAreaView>
      <View style={styles.title}>
       <Text style={styles.titleText}>Create Account</Text>
      </View>
-
+ 
      <View styles={styles.inputs}>
-     <TextInput style = {styles.inputStyle} placeholder="Name"></TextInput>
+     <TextInput style = {styles.inputStyle} placeholder="Name" onChangeText={onChangeName} ></TextInput>
      <TextInput style = {styles.inputStyle} placeholder="Address"></TextInput>
-     <TextInput style = {styles.inputStyle} placeholder="Phone Number"></TextInput>
-     <TextInput style = {styles.inputStyle} placeholder="Email Address"></TextInput>
+     <TextInput style = {styles.inputStyle} placeholder="Phone Number" onChangeText={onChangePhone}></TextInput>
+     <TextInput style = {styles.inputStyle} placeholder="Email Address" onChangeText={onChangeEmail}></TextInput>
      <TextInput style = {styles.inputStyle} placeholder="Password"></TextInput>
      </View>
 
      <View>
      <TouchableOpacity onPress={() => {
+            handelSave();
             props.navigation.navigate("Profile");
+            
           }}>
        
             <View style={styles.button2}>
@@ -36,7 +104,12 @@ const SignupScreen = (props) => {
             
 
         </TouchableOpacity>
+        
      </View>
+   
+    
+
+     
     </SafeAreaView>
   );
 };
