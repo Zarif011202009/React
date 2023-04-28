@@ -1,10 +1,42 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Button, Text, View, FlatList, StyleSheet, TouchableOpacity, Image, ScrollView } from "react-native";
 import SafeAreaView from "react-native-safe-area-view";
 import ProductCard from "../Components/ProductCard";
+import axios from "axios";
 
 
 const AdminComplaintsScreen = (props) => {
+
+  useEffect(()=>{
+    getList()
+},[])
+
+const getList= () => {
+  
+  fetch("http://localhost:3000/product",{
+      
+      method : "GET"
+  }).then(res=>{
+      return res.json()
+  }).then(res=>{
+      alert(res.list.length)
+  })
+}
+
+
+const handelDetete = (product) =>{
+  axios({
+      url:"http://localhost:3000/product/",
+      method : "DELETE",
+      data : {
+          id : product.id
+      }
+  }).then((res)=>{
+      getList();
+  })
+}
+
+
   return (
 
        <SafeAreaView style={{ flex: 1, backgroundColor: "#f2f2f2" }}>
@@ -128,6 +160,7 @@ const AdminComplaintsScreen = (props) => {
 
 <View>
             <TouchableOpacity onPress={() => {
+              handelDetete(product);
                 props.navigation.navigate("AdminProfile");
              }}>
        
