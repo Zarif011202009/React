@@ -1,10 +1,30 @@
-import React from "react";
-import { Button, Text, View, FlatList, StyleSheet, TouchableOpacity, Image, ScrollView } from "react-native";
+import React,  {useEffect, useState} from "react";
+import { Button, Modal, list, Text, View, FlatList, StyleSheet, TouchableOpacity, Image, ScrollView } from "react-native";
 import SafeAreaView from "react-native-safe-area-view";
 import ProductCard from "../Components/ProductCard";
+import axios from "axios";
 
 
 const AdminUsersScreen = (props) => {
+
+
+  useEffect(()=>{
+    getList()
+},[])
+
+const getList= () => {
+ 
+  fetch("http://localhost:3000/user",{
+     
+      method : "GET"
+  }).then(res=>{
+      return res.json()
+  }).then(res=>{
+      alert(res.list.length)
+  })
+}
+
+
   return (
 
        <SafeAreaView style={{ flex: 1, backgroundColor: "#f2f2f2" }}>
@@ -72,12 +92,33 @@ const AdminUsersScreen = (props) => {
 
         
 
+
+
+          {/* //dynamic from here
+
+
+
+        <ScrollView>
+                {list.map((user)=>{
+                    return(
+                        
+                            <View>
+                                <Text>{user.name}</Text>
+                                <Text>{user.email}</Text>
+                                <Text>{user.phone}</Text>
+                               
+                        </View>
+                    )
+                })}
+            </ScrollView>
+
+            
          
 
 
 
 
-            
+            //dynamic end */}
 
 
 
