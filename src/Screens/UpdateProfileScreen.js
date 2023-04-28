@@ -9,6 +9,24 @@ import axios from "axios";
 const UpdateProfileScreen = (props) => {
 
 
+  useEffect(()=>{
+    getList()
+},[])
+
+
+const getList= () => {
+ 
+  fetch("http://localhost:3000/user",{
+     
+      method : "GET"
+  }).then(res=>{
+      return res.json()
+  }).then(res=>{
+      alert(res.list.length)
+  })
+}
+
+
   const [name,setName] = useState("");
   const [email,setEmail] = useState("");
   const [phone,setPhone] = useState("");
