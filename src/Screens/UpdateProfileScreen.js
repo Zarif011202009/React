@@ -1,12 +1,41 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import SafeAreaView from "react-native-safe-area-view";
 import ProductCard from "../Components/ProductCard";
 import { Text, Form, TouchableOpacity, View, Input, StyleSheet, Flatlist } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
-
+import axios from "axios";
 
 
 const UpdateProfileScreen = (props) => {
+
+
+  const [name,setName] = useState("");
+  const [email,setEmail] = useState("");
+  const [phone,setPhone] = useState("");
+  const [id,setId] = useState(null);
+
+
+  const handleEdit = (currentUser) => {
+    
+    setId(currentUser.id)
+    setName(currentUser.name+"")
+    setEmail(currentUser.email+"")
+    setPhone(currentUser.phone+"")
+    
+}
+
+const onChangeName = (value) => {
+  setName(value)
+}
+
+const onChangePhone = (value) => {
+  setPhone(value)
+}
+
+const onChangeEmail = (value) => {
+  setEmail(value)
+}
+  
   return (
 
     <SafeAreaView style={{ flex: 1, backgroundColor: "#f2f2f2" }}>
@@ -68,16 +97,18 @@ const UpdateProfileScreen = (props) => {
     </View>
 
      <View styles={styles.inputs}>
-     <TextInput style = {styles.inputStyle} placeholder="Name"></TextInput>
+     <TextInput style = {styles.inputStyle} placeholder="Name" onChangeText={onChangeName}></TextInput>
      <TextInput style = {styles.inputStyle} placeholder="Address"></TextInput>
-     <TextInput style = {styles.inputStyle} placeholder="Phone Number"></TextInput>
-     <TextInput style = {styles.inputStyle} placeholder="Email Address"></TextInput>
+     <TextInput style = {styles.inputStyle} placeholder="Phone Number" onChangeText={onChangePhone}></TextInput>
+     <TextInput style = {styles.inputStyle} placeholder="Email Address" onChangeText={onChangeEmail}></TextInput>
      <TextInput style = {styles.inputStyle} placeholder="Password"></TextInput>
      </View>
 
      <View>
      <TouchableOpacity onPress={() => {
+            handleEdit();
             props.navigation.navigate("Profile");
+
           }}>
        
             <View style={styles.button2}>
