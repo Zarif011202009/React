@@ -3,6 +3,7 @@ import { Button, Text, View, FlatList, StyleSheet, TouchableOpacity, Image, Scro
 import SafeAreaView from "react-native-safe-area-view";
 import ProductCard from "../Components/ProductCard";
 import axios from "axios";
+import { deleteProduct } from "../Services/user.service";
 
 
 const AdminComplaintsScreen = (props) => {
@@ -24,15 +25,10 @@ const getList= () => {
 }
 
 
-const handelDetete = (product) =>{
-  axios({
-      url:"http://localhost:3000/product/",
-      method : "DELETE",
-      data : {
-          id : product.id
-      }
-  }).then((res)=>{
-      getList();
+const handelDetete = (id) =>{
+  deleteProduct(product.id)
+  .then(() => {
+      //getData();
   })
 }
 
@@ -160,7 +156,7 @@ const handelDetete = (product) =>{
 
 <View>
             <TouchableOpacity onPress={() => {
-              handelDetete(product);
+              handelDetete(product.id);
                 props.navigation.navigate("AdminProfile");
              }}>
        

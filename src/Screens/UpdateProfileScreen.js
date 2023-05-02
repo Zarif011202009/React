@@ -4,10 +4,28 @@ import ProductCard from "../Components/ProductCard";
 import { Text, Form, TouchableOpacity, View, Input, StyleSheet, Flatlist } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import axios from "axios";
+import { updateUser } from "../Services/user.service";
 
+import { useHistory } from 'react-router-dom';
+
+
+
+
+ 
 
 const UpdateProfileScreen = (props) => {
+const [name1, setName] = useState('');
+const [phone1, setPhone] = useState('');
+const [email1, setEmail] = useState('');
 
+
+  //let history = useHistory();
+
+ 
+
+  
+
+  
 
   useEffect(()=>{
     getList()
@@ -27,18 +45,26 @@ const getList= () => {
 }
 
 
-  const [name,setName] = useState("");
-  const [email,setEmail] = useState("");
-  const [phone,setPhone] = useState("");
-  const [id,setId] = useState(null);
+// useEffect(() => {
+//   setName(localStorage.getItem('name'));
+//   setPhone(localStorage.getItem('phone'));
+//   setEmail(localStorage.getItem('email'))
+// }, [])
+
+
+ 
 
 
   const handleEdit = (currentUser) => {
+
+    updateUser().then((res)=>{
     
     setId(currentUser.id)
     setName(currentUser.name+"")
     setEmail(currentUser.email+"")
     setPhone(currentUser.phone+"")
+
+    })
     
 }
 

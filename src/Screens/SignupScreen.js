@@ -7,10 +7,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { addUser } from "../Services/user.service";
 
-
-
-
-
 const SignupScreen = (props) => {
 
   const [name,setName] = useState("");
