@@ -3,14 +3,27 @@ import { Button, Modal, list, Text, View, FlatList, StyleSheet, TouchableOpacity
 import SafeAreaView from "react-native-safe-area-view";
 import ProductCard from "../Components/ProductCard";
 import axios from "axios";
+import { viewUser } from "../Services/user.service";
 
 
 const AdminUsersScreen = (props) => {
 
 
-  useEffect(()=>{
-    getList()
-},[])
+  const [apiData, setApiData] = useState([]);
+  useEffect(() => {
+      viewUser()
+          .then((getData) => {
+              setApiData(getData.data);
+          })
+  }, [])
+
+
+  const getData = () => {
+    viewUser()
+    .then((getData) => {
+            setApiData(getData.data);
+        })
+}
 
 const getList= () => {
  
@@ -25,7 +38,11 @@ const getList= () => {
 }
 
 
+const userArray = [];
+
   return (
+
+    
 
        <SafeAreaView style={{ flex: 1, backgroundColor: "#f2f2f2" }}>
       <View style={styles.sideways}>
@@ -94,11 +111,13 @@ const getList= () => {
 
 
 
-           {/* //dynamic from here
+   
 
 
 
-        <ScrollView>
+       {/* <ScrollView>
+
+        
                 {list.map((user)=>{
                     return(
                         
@@ -110,7 +129,41 @@ const getList= () => {
                         </View>
                     )
                 })}
-            </ScrollView>
+            </ScrollView>  */}
+{/* 
+            <View>
+
+              
+            userArray = viewUser();
+
+            <Text>
+              {userArray[0].name}
+            </Text>
+
+            </View> */}
+
+
+            <View>
+
+
+            {apiData.map((data) => {
+                        return (
+                          <View>
+                            
+                                <Text>{data.id}</Text>
+                                <Text>{data.name}</Text>
+                                <Text>{data.email}</Text>
+                               </View>
+                                    
+                        )
+                    })}
+
+
+        </View>
+
+
+
+           
 
             
          
@@ -118,7 +171,7 @@ const getList= () => {
 
 
 
-            //dynamic end  */}
+       
 
 
 
