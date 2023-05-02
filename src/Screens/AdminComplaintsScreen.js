@@ -3,10 +3,14 @@ import { Button, Text, View, FlatList, StyleSheet, TouchableOpacity, Image, Scro
 import SafeAreaView from "react-native-safe-area-view";
 import ProductCard from "../Components/ProductCard";
 import axios from "axios";
-import { deleteProduct } from "../Services/user.service";
+import { deleteProduct } from "../Services/product.service";
 
 
 const AdminComplaintsScreen = (props) => {
+
+
+
+
 
   useEffect(()=>{
     getList()
