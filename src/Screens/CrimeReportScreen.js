@@ -27,7 +27,7 @@ const CrimeReportScreen = (props) => {
             "priority":priority
           }
           console.log(data)
-          addUser(data).then((res)=>{
+          addProduct(data).then((res)=>{
           console.log(res)
           
   
