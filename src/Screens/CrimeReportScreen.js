@@ -1,16 +1,59 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 import SafeAreaView from "react-native-safe-area-view";
 import ProductCard from "../Components/ProductCard";
 import { Text, Form, TouchableOpacity, View, Input, StyleSheet, Flatlist, ScrollView } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import { SelectList } from "react-native-dropdown-select-list";
+import { addProduct } from "../Services/product.service";
 
 
 
 
 
 const CrimeReportScreen = (props) => {
+
+
+    const [category,setCategory] = useState("");
+    const [condition,setCondition] = useState("");
+    const [priority_,setPriority] = useState("");
+
+
+    const handelSave = () => {
+
+        var data = {
+            "category": category,
+            "condition": condition,
+            "priority":priority
+          }
+          console.log(data)
+          addUser(data).then((res)=>{
+          console.log(res)
+          
+  
+            setCategory("")
+            
+            setCondition("")
+            setPriority("")
+        
+        })
+      }
+  
+      const onChangeCategory = (value) => {
+        setCategory(value)
+    }
+  
+    const onChangeCondition = (value) => {
+      setCondition(value)
+  }
+  
+  const onChangePriority = (value) => {
+    setPriority(value)
+  }
+    
+
+
+
     const [selected, setSelected] = React.useState("");
 
     const categories = [
@@ -165,6 +208,7 @@ const CrimeReportScreen = (props) => {
             //dropdownItemStyles={{marginHorizontal:10}}
             maxHeight={200}
             dropdownStyles={{margin:10, borderRadius:4}}
+            value={category}
            
             >
                 
@@ -212,6 +256,7 @@ const CrimeReportScreen = (props) => {
             //dropdownItemStyles={{borderColor:"black", borderWidth: 0.5, borderRadius: 10, marginBottom: 2}}
             maxHeight={200}
             dropdownStyles={{margin:10,  borderRadius:4}}
+            value={condition}
            
             >
                 
@@ -310,6 +355,7 @@ const CrimeReportScreen = (props) => {
             //dropdownItemStyles={{borderColor:"black", borderWidth: 0.5}}
             maxHeight={200}
             dropdownStyles={{margin:10, borderRadius:4}}
+            value={priority_}
            
             >
                 
@@ -352,6 +398,7 @@ const CrimeReportScreen = (props) => {
 
         <View>
             <TouchableOpacity onPress={() => {
+                handelSave();
                 props.navigation.navigate("Profile");
              }}>
        
