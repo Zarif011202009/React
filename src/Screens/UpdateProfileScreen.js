@@ -57,14 +57,32 @@ const getList= () => {
 
   const handleEdit = (currentUser) => {
 
-    updateUser().then((res)=>{
+    // updateUser().then((res)=>{
     
-    setId(currentUser.id)
-    setName(currentUser.name+"")
-    setEmail(currentUser.email+"")
-    setPhone(currentUser.phone+"")
+    // setId(currentUser.id)
+    // setName(currentUser.name+"")
+    // setEmail(currentUser.email+"")
+    // setPhone(currentUser.phone+"")
 
-    })
+    // })
+
+
+    var data = {
+      "name": name,
+      "email": email,
+      "phone":phone
+    }
+    console.log(data, currentUser)
+    updateUser(data, currentUser).then((res)=>{
+    console.log(res)
+    
+
+      setName("")
+      
+      setPhone("")
+      setEmail("")
+  
+  })
     
 }
 
